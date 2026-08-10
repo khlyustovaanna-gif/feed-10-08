@@ -1,0 +1,47 @@
+name: Update cleaned feed
+
+on:
+  schedule:
+    # runs daily at 03:00 UTC — поменяйте при необходимости
+    - cron: '0 3 * * *'
+  push:
+    paths:
+      - 'feed.xml'
+      - 'clean_feed.py'
+  workflow_dispatch: {}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install requirements (if any)
+        run: |
+          python -m pip install --upgrade pip
+          # add packages if your script needs them, e.g. lxml
+          # pip install lxml
+
+      - name: Run clean_feed.py
+        run: |
+          python ./clean_feed.py ./feed.xml
+
+      - name: Commit and push feed.cleaned.xml if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git status --porcelain | grep -q 'feed.cleaned.xml'; then
+            git add feed.cleaned.xml
+            git commit -m "Auto-update feed.cleaned.xml (GitHub Actions)"
+            git push
+          else
+            echo "No changes to feed.cleaned.xml"
+          fi
