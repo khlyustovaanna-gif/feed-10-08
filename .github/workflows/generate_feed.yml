@@ -1,7 +1,7 @@
 name: Generate YML feed
 
 on:
-  workflow_dispatch:
+  workflow_dispatch: {}
   schedule:
     - cron: '0 */6 * * *' # every 6 hours
 
@@ -29,20 +29,20 @@ jobs:
         run: |
           python generate_feed_from_tilda_t778.py -i site_unpacked -b https://sto.cross-export.ru -o feed.xml
 
+      - name: Upload feed.xml artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: feed-xml
+          path: feed.xml
+
       - name: Validate feed (min 5 offers)
         run: |
-          python - <<'PY'
-          import xml.etree.ElementTree as ET
-          try:
-              tree = ET.parse('feed.xml')
-              offers = len(tree.findall('.//offer'))
-          except Exception as e:
-              print('XML parse error:', e)
-              offers = 0
-          print('Found', offers, 'offers')
-          if offers < 5:
-              raise SystemExit('Feed validation failed: less than 5 offers')
-          PY
+          COUNT=$(xmllint --xpath 'count(//offer)' feed.xml 2>/dev/null || echo 0)
+          echo "Found $COUNT offers"
+          if [ "$COUNT" -lt 5 ]; then
+            echo "Feed validation failed: less than 5 offers" >&2
+            exit 1
+          fi
 
       - name: Commit and push feed.xml
         uses: stefanzweifel/git-auto-commit-action@v4
