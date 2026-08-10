@@ -1,43 +1,48 @@
 name: Generate YML feed
 
-on: workflow_dispatch: schedule: - cron: '0 */6 * * *' # every 6 hours
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 */6 * * *' # every 6 hours
 
-jobs: build: runs-on: ubuntu-latest
+jobs:
+  build:
+    runs-on: ubuntu-latest
 
-steps:
-  - name: Checkout repository
-    uses: actions/checkout@v4
-    with:
-      fetch-depth: 0
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-  - name: Set up Python
-    uses: actions/setup-python@v4
-    with:
-      python-version: '3.10'
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
 
-  - name: Install dependencies
-    run: |
-      python -m pip install --upgrade pip
-      pip install beautifulsoup4 lxml
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install beautifulsoup4 lxml
 
-  - name: Run feed generator
-    run: |
-      python generate_feed_from_tilda_t778.py -i site_unpacked -b https://sto.cross-export.ru -o feed.xml
+      - name: Run feed generator
+        run: |
+          python generate_feed_from_tilda_t778.py -i site_unpacked -b https://sto.cross-export.ru -o feed.xml
 
-  - name: Validate feed (min 5 offers)
-    run: |
-      COUNT=$(xmllint --xpath 'count(//offer)' feed.xml 2>/dev/null || echo 0)
-      echo "Found $COUNT offers"
-      if [ "$COUNT" -lt 5 ]; then
-        echo "Feed validation failed: less than 5 offers" >&2
-        exit 1
-      fi
+      - name: Validate feed (min 5 offers)
+        run: |
+          COUNT=$(xmllint --xpath 'count(//offer)' feed.xml 2>/dev/null || echo 0)
+          echo "Found $COUNT offers"
+          if [ "$COUNT" -lt 5 ]; then
+            echo "Feed validation failed: less than 5 offers" >&2
+            exit 1
+          fi
 
-  - name: Commit and push feed.xml
-    uses: stefanzweifel/git-auto-commit-action@v4
-    with:
-      branch: main
-      file_pattern: feed.xml
-      commit_message: "chore(feed): update feed.xml [skip ci]"
-      commit_user_name: github-actions[bot]
-      commit_user_email: 41898282+github-actions[bot]@users.noreply.github.com
+      - name: Commit and push feed.xml
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          branch: main
+          file_pattern: feed.xml
+          commit_message: "chore(feed): update feed.xml [skip ci]"
+          commit_user_name: github-actions[bot]
+          commit_user_email: 41898282+github-actions[bot]@users.noreply.github.com
