@@ -1,8 +1,9 @@
+```yaml
 name: Update cleaned feed
 
 on:
   schedule:
-    - cron: '0 3 * * *'    # раз в сутки в 03:00 UTC — при необходимости поменяйте
+    - cron: '0 3 * * *'    # раз в сутки в 03:00 UTC — поменяйте при необходимости
   push:
     paths:
       - 'feed-10-08/feed.xml'
@@ -29,18 +30,14 @@ jobs:
           python -m pip install --upgrade pip
           # pip install lxml    # раскомментируйте, если нужен lxml
 
-      - name: Run clean_feed.py (in feed-10-08)
-        working-directory: ./feed-10-08
+      - name: Run clean_feed.py
         run: |
-          python ./clean_feed.py ./feed.xml
+          python ./feed-10-08/clean_feed.py ./feed-10-08/feed.xml
 
       - name: Commit and push feed.cleaned.xml if changed
-        working-directory: ./feed-10-08
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          # Вернёмся в корень Git чтобы добавить файл с корректным относительным путём
-          cd ..
           if git status --porcelain | grep -q 'feed-10-08/feed.cleaned.xml'; then
             git add feed-10-08/feed.cleaned.xml
             git commit -m "Auto-update feed.cleaned.xml (GitHub Actions)"
@@ -48,3 +45,4 @@ jobs:
           else
             echo "No changes to feed.cleaned.xml"
           fi
+```
