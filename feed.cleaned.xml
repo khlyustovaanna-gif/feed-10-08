@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<yml_catalog date="2020-01-01 00:00">
+  <shop>
+    <name>My Shop</name>
+    <company>My Shop</company>
+    <url>https://sto.cross-export.ru</url>
+    <offers>
+      <offer id="75c2836b-5f34-5d">
+        <url>https://sto.cross-export.ru/ug1500</url>
+        <price>1500</price>
+        <currencyId>RUB</currencyId>
+        <category>Стенд для опрессовки ГБЦ УГ 1500</category>
+        <picture>https://sto.cross-export.ru/images/tild3264-3465-4461-b364-366437613938__check.svg</picture>
+        <name>Предпродажное консультирование</name>
+        <description>Бесплатная техподдержка на весь срок. Доставка РФ. В наличии и на заказ. Гарантия.</description>
+      </offer><offer id="081f4113-c696-5e">
+        <url>https://sto.cross-export.ru/ug1500</url>
+        <price>1500</price>
+        <currencyId>RUB</currencyId>
+        <category>Стенд для опрессовки ГБЦ УГ 1500</category>
+        <picture>https://sto.cross-export.ru/images/tild3264-3465-4461-b364-366437613938__check.svg</picture>
+        <name>Возможность покупки в лизинг</name>
+        <description>Бесплатная техподдержка на весь срок. Доставка РФ. В наличии и на заказ. Гарантия.</description>
+      </offer><offer id="f9084d90-1cab-50">
+        <url>https://sto.cross-export.ru/ug1500</url>
+        <price>25</price>
+        <currencyId>RUB</currencyId>
+        <category>Стенд для опрессовки ГБЦ УГ 1500</category>
+        <picture>https://sto.cross-export.ru/images/tild3264-3465-4461-b364-366437613938__check.svg</picture>
+        <name>Скидка 25% на доставку по РФ</name>
+        <description>Бесплатная техподдержка на весь срок. Доставка РФ. В наличии и на заказ. Гарантия.</description>
+      </offer><offer id="0bac3a6f-ecb4-58">
+        <url>https://sto.cross-export.ru/ug1500</url>
+        <price>1500</price>
+        <currencyId>RUB</currencyId>
+        <category>Стенд для опрессовки ГБЦ УГ 1500</category>
+        <picture>https://sto.cross-export.ru/images/tild3264-3465-4461-b364-366437613938__check.svg</picture>
+        <name>Гарантийное и постгарантийное обслуживание</name>
+        <description>Бесплатная техподдержка на весь срок. Доставка РФ. В наличии и на заказ. Гарантия.</description>
+      </offer><offer id="3974567c-0cd7-5d">
+        <url>https://sto.cross-export.ru/ug1500</url>
+        <price>1500</price>
+        <currencyId>RUB</currencyId>
+        <category>Стенд для опрессовки ГБЦ УГ 1500</category>
+        <picture>https://sto.cross-export.ru/images/tild3264-3465-4461-b364-366437613938__check.svg</picture>
+        <name>Ремонт и поставка запчастей</name>
+        <description>Бесплатная техподдержка на весь срок. Доставка РФ. В наличии и на заказ. Гарантия.</description>
+      </offer><offer id="cf6c8dab-027f-54">
+        <url>https://sto.cross-export.ru/ug1500</url>
+        <price>1500</price>
+        <currencyId>RUB</currencyId>
+        <category>Стенд для опрессовки ГБЦ УГ 1500</category>
+        <picture>https://sto.cross-export.ru/images/tild3264-3465-4461-b364-366437613938__check.svg</picture>
+        <name>Техническая поддержка на весь срок эксплуатации</name>
+        <description>Бесплатная техподдержка на весь срок. Доставка РФ. В наличии и на заказ. Гарантия.</description>
+      </offer><offer id="moechnye_eko">
+        <url>https://sto.cross-export.ru/moechnye_eko</url>
+        <price>3</price>
+        <currencyId>RUB</currencyId>
+        <category>Моечные машины для деталей ДВС</category>
+        <picture>https://sto.cross-export.ru/images/tild3066-6534-4364-a563-386234643662__3.jpg</picture>
+        <name>Моечная машина для двигателя EKO серия</name>
+        <description>Бесплатная техподдержка на весь срок. Доставка РФ. В наличии и на заказ. Гарантия.</description>
+      </offer><offer id="moechnye_lk">
+        <url>https://sto.cross-export.ru/moechnye_lk</url>
+        <price>3</price>
+        <currencyId>RUB</currencyId>
+        <category>Моечные машины для деталей ДВС</category>
+        <picture>https://sto.cross-export.ru/images/tild3066-6534-4364-a563-386234643662__3.jpg</picture>
+        <name>Моечная машина для двигателя LK серия</name>
+        <description>Бесплатная техподдержка на весь срок. Доставка РФ. В наличии и на заказ. Гарантия.</description>
+      </offer><offer id="moechnye_ak">
+        <url>https://sto.cross-export.ru/moechnye_ak</url>
+        <price>3</price>
+        <currencyId>RUB</currencyId>
+        <category>Моечные машины для деталей ДВС</category>
+        <picture>https://sto.cross-export.ru/images/tild3066-6534-4364-a563-386234643662__3.jpg</picture>
+        <name>Моечная машина для двигателя АK серия</name>
+        <description>Бесплатная техподдержка на весь срок. Доставка РФ. В наличии и на заказ. Гарантия.</description>
+      </offer><offer id="3m9816">
+        <url>https://sto.cross-export.ru/3m9816</url>
+        <price>3</price>
+        <currencyId>RUB</currencyId>
+        <category>Вертикально-хонинговальные станки</category>
+        <picture>https://sto.cross-export.ru/images/tild3935-3236-4263-a439-366261633139__9.jpg</picture>
+        <name>Вертикально хонинговальный станок 3М9816</name>
+        <description>Бесплатная техподдержка на весь срок. Доставка РФ. В наличии и на заказ. Гарантия.</description>
+      </offer><offer id="3mb9817">
+        <url>https://sto.cross-export.ru/3mb9817</url>
+        <price>3</price>
+        <currencyId>RUB</currencyId>
+        <category>Вертикально-хонинговальные станки</category>
+        <picture>https://sto.cross-export.ru/images/tild3935-3236-4263-a439-366261633139__9.jpg</picture>
+        <name>Вертикально хонинговальный станок 3MB9817</name>
+        <description>Бесплатная техподдержка на весь срок. Доставка РФ. В наличии и на заказ. Гарантия.</description>
+      </offer><offer id="th170d">
+        <url>https://sto.cross-export.ru/th170d</url>
+        <price>170</price>
+        <currencyId>RUB</currencyId>
+        <category>Вертикально-хонинговальные станки</category>
+        <picture>https://sto.cross-export.ru/images/tild3935-3236-4263-a439-366261633139__9.jpg</picture>
+        <name>Вертикально хонинговальный станок TH170D</name>
+        <description>Бесплатная техподдержка на весь срок. Доставка РФ. В наличии и на заказ. Гарантия.</description>
+      </offer><offer id="vhm170">
+        <url>https://sto.cross-export.ru/vhm170</url>
+        <price>170</price>
+        <currencyId>RUB</currencyId>
+        <category>Вертикально-хонинговальные станки</category>
+        <picture>https://sto.cross-export.ru/images/tild3935-3236-4263-a439-366261633139__9.jpg</picture>
+        <name>Вертикально хонинговальный станок VHM170</name>
+        <description>Бесплатная техподдержка на весь срок. Доставка РФ. В наличии и на заказ. Гарантия.</description>
+      </offer><offer id="ld100l">
+        <url>https://sto.cross-export.ru/ld100l</url>
+        <price>100</price>
+        <currencyId>RUB</currencyId>
+        <category>Станки для шлифовки клапанов</category>
+        <picture>https://sto.cross-export.ru/images/tild6361-3837-4765-b031-623337303435__7.jpg</picture>
+        <name>Станок для шлифовки клапанов LD100L</name>
+        <description>Бесплатная техподдержка на весь срок. Доставка РФ. В наличии и на заказ. Гарантия.</description>
+      </offer><offer id="ld100s">
+        <url>https://sto.cross-export.ru/ld100s</url>
+        <price>100</price>
+        <currencyId>RUB</currencyId>
+        <category>Станки для шлифовки клапанов</category>
+        <picture>https://sto.cross-export.ru/images/tild6361-3837-4765-b031-623337303435__7.jpg</picture>
+        <name>Станок для шлифовки клапанов LD100S</name>
+        <description>Бесплатная техподдержка на весь срок. Доставка РФ. В наличии и на заказ. Гарантия.</description>
+      </offer><offer id="smg1500">
+        <url>https://sto.cross-export.ru/smg1500</url>
+        <price>1500</price>
+        <currencyId>RUB</currencyId>
+        <category>Станки для фрезеровки и шлифовки</category>
+        <picture>https://sto.cross-export.ru/images/tild3231-3934-4232-b630-396666653066__4.jpg</picture>
+        <name>Станок для обработки поверхностей ГБЦ SMG1500</name>
+        <description>Бесплатная техподдержка на весь срок. Доставка РФ. В наличии и на заказ. Гарантия.</description>
+      </offer><offer id="3m9735130">
+        <url>https://sto.cross-export.ru/3m9735130</url>
+        <price>3</price>
+        <currencyId>RUB</currencyId>
+        <category>Станки для фрезеровки и шлифовки</category>
+        <picture>https://sto.cross-export.ru/images/tild3231-3934-4232-b630-396666653066__4.jpg</picture>
+        <name>Станок для фрезеровки и шлифовки плоскости ГБЦ и блока цилиндров 3M9735С130</name>
+        <description>Бесплатная техподдержка на весь срок. Доставка РФ. В наличии и на заказ. Гарантия.</description>
+      </offer><offer id="3m9735150">
+        <url>https://sto.cross-export.ru/3m9735150</url>
+        <price>3</price>
+        <currencyId>RUB</currencyId>
+        <category>Станки для фрезеровки и шлифовки</category>
+        <picture>https://sto.cross-export.ru/images/tild3231-3934-4232-b630-396666653066__4.jpg</picture>
+        <name>Станок для фрезеровки и шлифовки плоскости ГБЦ и блока цилиндров 3M9735С150</name>
+        <description>Бесплатная техподдержка на весь срок. Доставка РФ. В наличии и на заказ. Гарантия.</description>
+      </offer><offer id="3m9740c130">
+        <url>https://sto.cross-export.ru/3m9740c130</url>
+        <price>3</price>
+        <currencyId>RUB</currencyId>
+        <category>Станки для фрезеровки и шлифовки</category>
+        <picture>https://sto.cross-export.ru/images/tild3231-3934-4232-b630-396666653066__4.jpg</picture>
+        <name>Станок для фрезеровки и шлифовки плоскости ГБЦ и блока цилиндров 3M9740С130</name>
+        <description>Бесплатная техподдержка на весь срок. Доставка РФ. В наличии и на заказ. Гарантия.</description>
+      </offer><offer id="3m9740c150">
+        <url>https://sto.cross-export.ru/3m9740c150</url>
+        <price>3</price>
+        <currencyId>RUB</currencyId>
+        <category>Станки для фрезеровки и шлифовки</category>
+        <picture>https://sto.cross-export.ru/images/tild3231-3934-4232-b630-396666653066__4.jpg</picture>
+        <name>Станок для фрезеровки и шлифовки плоскости ГБЦ и блока цилиндров 3M9740С150</name>
+        <description>Бесплатная техподдержка на весь срок. Доставка РФ. В наличии и на заказ. Гарантия.</description>
+      </offer><offer id="tsm-850">
+        <url>https://sto.cross-export.ru/tsm-850</url>
+        <price>850</price>
+        <currencyId>RUB</currencyId>
+        <category>Станки для фрезеровки и шлифовки</category>
+        <picture>https://sto.cross-export.ru/images/tild3231-3934-4232-b630-396666653066__4.jpg</picture>
+        <name>Плоскошлифовальный станок TSM-850</name>
+        <description>Бесплатная техподдержка на весь срок. Доставка РФ. В наличии и на заказ. Гарантия.</description>
+      </offer><offer id="bm200">
+        <url>https://sto.cross-export.ru/bm200</url>
+        <price>200</price>
+        <currencyId>RUB</currencyId>
+        <category>Вертикально-расточные станки</category>
+        <picture>https://sto.cross-export.ru/images/tild3637-3565-4764-a634-333166306532__5.jpg</picture>
+        <name>Вертикально-расточной станок с функцией фрезеровки плоскости BM200</name>
+        <description>Бесплатная техподдержка на весь срок. Доставка РФ. В наличии и на заказ. Гарантия.</description>
+      </offer><offer id="t200d">
+        <url>https://sto.cross-export.ru/t200d</url>
+        <price>200</price>
+        <currencyId>RUB</currencyId>
+        <category>Вертикально-расточные станки</category>
+        <picture>https://sto.cross-export.ru/images/tild3637-3565-4764-a634-333166306532__5.jpg</picture>
+        <name>Вертикально-расточной станок с функцией фрезеровки плоскости T200D</name>
+        <description>Бесплатная техподдержка на весь срок. Доставка РФ. В наличии и на заказ. Гарантия.</description>
+      </offer><offer id="tx200d">
+        <url>https://sto.cross-export.ru/tx200d</url>
+        <price>200</price>
+        <currencyId>RUB</currencyId>
+        <category>Вертикально-расточные станки</category>
+        <picture>https://sto.cross-export.ru/images/tild3637-3565-4764-a634-333166306532__5.jpg</picture>
+        <name>Вертикально-расточной станок с функцией фрезеровки плоскости TХ200D</name>
+        <description>Бесплатная техподдержка на весь срок. Доставка РФ. В наличии и на заказ. Гарантия.</description>
+      </offer><offer id="txm200d">
+        <url>https://sto.cross-export.ru/txm200d</url>
+        <price>200</price>
+        <currencyId>RUB</currencyId>
+        <category>Вертикально-расточные станки</category>
+        <picture>https://sto.cross-export.ru/images/tild3637-3565-4764-a634-333166306532__5.jpg</picture>
+        <name>Вертикально-расточной станок с функцией фрезеровки плоскости TХМ200D</name>
+        <description>Бесплатная техподдержка на весь срок. Доставка РФ. В наличии и на заказ. Гарантия.</description>
+      </offer><offer id="ld-1650">
+        <url>https://sto.cross-export.ru/ld-1650</url>
+        <price>1650</price>
+        <currencyId>RUB</currencyId>
+        <category>Стенды для опрессовки ГБЦ</category>
+        <picture>https://sto.cross-export.ru/images/tild6163-3161-4465-b233-353936353061__1.jpg</picture>
+        <name>Стенд для опрессовки ГБЦ LD-1650</name>
+        <description>Бесплатная техподдержка на весь срок. Доставка РФ. В наличии и на заказ. Гарантия.</description>
+      </offer><offer id="ld-1750">
+        <url>https://sto.cross-export.ru/ld-1750</url>
+        <price>1750</price>
+        <currencyId>RUB</currencyId>
+        <category>Стенды для опрессовки ГБЦ</category>
+        <picture>https://sto.cross-export.ru/images/tild6163-3161-4465-b233-353936353061__1.jpg</picture>
+        <name>Стенд для опрессовки ГБЦ LD-1750</name>
+        <description>Бесплатная техподдержка на весь срок. Доставка РФ. В наличии и на заказ. Гарантия.</description>
+      </offer><offer id="ug1000">
+        <url>https://sto.cross-export.ru/ug1000</url>
+        <price>1000</price>
+        <currencyId>RUB</currencyId>
+        <category>Стенды для опрессовки ГБЦ</category>
+        <picture>https://sto.cross-export.ru/images/tild6163-3161-4465-b233-353936353061__1.jpg</picture>
+        <name>Стенд для опрессовки ГБЦ УГ1000</name>
+        <description>Бесплатная техподдержка на весь срок. Доставка РФ. В наличии и на заказ. Гарантия.</description>
+      </offer><offer id="ug1200">
+        <url>https://sto.cross-export.ru/ug1200</url>
+        <price>1200</price>
+        <currencyId>RUB</currencyId>
+        <category>Стенды для опрессовки ГБЦ</category>
+        <picture>https://sto.cross-export.ru/images/tild6163-3161-4465-b233-353936353061__1.jpg</picture>
+        <name>Стенд для опрессовки ГБЦ УГ1200</name>
+        <description>Бесплатная техподдержка на весь срок. Доставка РФ. В наличии и на заказ. Гарантия.</description>
+      </offer><offer id="ug1400">
+        <url>https://sto.cross-export.ru/ug1400</url>
+        <price>1400</price>
+        <currencyId>RUB</currencyId>
+        <category>Стенды для опрессовки ГБЦ</category>
+        <picture>https://sto.cross-export.ru/images/tild6163-3161-4465-b233-353936353061__1.jpg</picture>
+        <name>Стенд для опрессовки ГБЦ УГ1400</name>
+        <description>Бесплатная техподдержка на весь срок. Доставка РФ. В наличии и на заказ. Гарантия.</description>
+      </offer><offer id="ug1500">
+        <url>https://sto.cross-export.ru/ug1500</url>
+        <price>1500</price>
+        <currencyId>RUB</currencyId>
+        <category>Стенды для опрессовки ГБЦ</category>
+        <picture>https://sto.cross-export.ru/images/tild6163-3161-4465-b233-353936353061__1.jpg</picture>
+        <name>Стенд для опрессовки ГБЦ УГ1500</name>
+        <description>Бесплатная техподдержка на весь срок. Доставка РФ. В наличии и на заказ. Гарантия.</description>
+      </offer><offer id="ug1600">
+        <url>https://sto.cross-export.ru/ug1600</url>
+        <price>1600</price>
+        <currencyId>RUB</currencyId>
+        <category>Стенды для опрессовки ГБЦ</category>
+        <picture>https://sto.cross-export.ru/images/tild6163-3161-4465-b233-353936353061__1.jpg</picture>
+        <name>Стенд для опрессовки ГБЦ УГ1600</name>
+        <description>Бесплатная техподдержка на весь срок. Доставка РФ. В наличии и на заказ. Гарантия.</description>
+      </offer><offer id="lb1000">
+        <url>https://sto.cross-export.ru/lb1000</url>
+        <price>1000</price>
+        <currencyId>RUB</currencyId>
+        <category>Горизонтально-расточные станки</category>
+        <picture>https://sto.cross-export.ru/images/tild6463-3038-4266-a134-366638346336__8.jpg</picture>
+        <name>Горизонтально-расточной станок для постелей ГБЦ и блока цилиндров LB 1000</name>
+        <description>Бесплатная техподдержка на весь срок. Доставка РФ. В наличии и на заказ. Гарантия.</description>
+      </offer><offer id="lb2300">
+        <url>https://sto.cross-export.ru/lb2300</url>
+        <price>2300</price>
+        <currencyId>RUB</currencyId>
+        <category>Горизонтально-расточные станки</category>
+        <picture>https://sto.cross-export.ru/images/tild6463-3038-4266-a134-366638346336__8.jpg</picture>
+        <name>Горизонтально-расточной станок для постелей ГБЦ и блока цилиндров LB2300</name>
+        <description>Бесплатная техподдержка на весь срок. Доставка РФ. В наличии и на заказ. Гарантия.</description>
+      </offer><offer id="t8120sf">
+        <url>https://sto.cross-export.ru/t8120sf</url>
+        <price>8120</price>
+        <currencyId>RUB</currencyId>
+        <category>Горизонтально-расточные станки</category>
+        <picture>https://sto.cross-export.ru/images/tild6463-3038-4266-a134-366638346336__8.jpg</picture>
+        <name>Горизонтально-расточной станок для постелей ГБЦ и блока цилиндров T8120SF</name>
+        <description>Бесплатная техподдержка на весь срок. Доставка РФ. В наличии и на заказ. Гарантия.</description>
+      </offer><offer id="tnvd">
+        <url>https://sto.cross-export.ru/tnvd</url>
+        <price>7</price>
+        <currencyId>RUB</currencyId>
+        <category>Продаем стенды ТНВД и станки для ремонта ДВС. Цена до 20% выгоднее, чем у конкурентов</category>
+        <picture>https://sto.cross-export.ru/images/tild3062-6330-4764-a263-303737666631___.jpg</picture>
+        <name>Стенды для проверки ТНВД и форсунок Common Rail</name>
+        <description>Бесплатная техподдержка на весь срок. Доставка РФ. В наличии и на заказ. Гарантия.</description>
+      </offer><offer id="opressov">
+        <url>https://sto.cross-export.ru/opressov</url>
+        <price>7</price>
+        <currencyId>RUB</currencyId>
+        <category>Продаем стенды ТНВД и станки для ремонта ДВС. Цена до 20% выгоднее, чем у конкурентов</category>
+        <picture>https://sto.cross-export.ru/images/tild3062-6330-4764-a263-303737666631___.jpg</picture>
+        <name>Стенды для опрессовки ГБЦ</name>
+        <description>Бесплатная техподдержка на весь срок. Доставка РФ. В наличии и на заказ. Гарантия.</description>
+      </offer><offer id="remshatunov">
+        <url>https://sto.cross-export.ru/remshatunov</url>
+        <price>7</price>
+        <currencyId>RUB</currencyId>
+        <category>Продаем стенды ТНВД и станки для ремонта ДВС. Цена до 20% выгоднее, чем у конкурентов</category>
+        <picture>https://sto.cross-export.ru/images/tild3062-6330-4764-a263-303737666631___.jpg</picture>
+        <name>Станки для ремонта шатунов</name>
+        <description>Бесплатная техподдержка на весь срок. Доставка РФ. В наличии и на заказ. Гарантия.</description>
+      </offer><offer id="frezerovka">
+        <url>https://sto.cross-export.ru/frezerovka</url>
+        <price>7</price>
+        <currencyId>RUB</currencyId>
+        <category>Продаем стенды ТНВД и станки для ремонта ДВС. Цена до 20% выгоднее, чем у конкурентов</category>
+        <picture>https://sto.cross-export.ru/images/tild3062-6330-4764-a263-303737666631___.jpg</picture>
+        <name>Станки для фрезеровки и шлифовки плоскости ГБЦ и блока цилиндров</name>
+        <description>Бесплатная техподдержка на весь срок. Доставка РФ. В наличии и на заказ. Гарантия.</description>
+      </offer><offer id="vertrast">
+        <url>https://sto.cross-export.ru/vertrast</url>
+        <price>7</price>
+        <currencyId>RUB</currencyId>
+        <category>Продаем стенды ТНВД и станки для ремонта ДВС. Цена до 20% выгоднее, чем у конкурентов</category>
+        <picture>https://sto.cross-export.ru/images/tild3062-6330-4764-a263-303737666631___.jpg</picture>
+        <name>Вертикально-расточные станки</name>
+        <description>Бесплатная техподдержка на весь срок. Доставка РФ. В наличии и на заказ. Гарантия.</description>
+      </offer><offer id="faskasedla">
+        <url>https://sto.cross-export.ru/faskasedla</url>
+        <price>7</price>
+        <currencyId>RUB</currencyId>
+        <category>Продаем стенды ТНВД и станки для ремонта ДВС. Цена до 20% выгоднее, чем у конкурентов</category>
+        <picture>https://sto.cross-export.ru/images/tild3062-6330-4764-a263-303737666631___.jpg</picture>
+        <name>Станки для обработки фаски седла клапана</name>
+        <description>Бесплатная техподдержка на весь срок. Доставка РФ. В наличии и на заказ. Гарантия.</description>
+      </offer><offer id="obrabklapana">
+        <url>https://sto.cross-export.ru/obrabklapana</url>
+        <price>7</price>
+        <currencyId>RUB</currencyId>
+        <category>Продаем стенды ТНВД и станки для ремонта ДВС. Цена до 20% выгоднее, чем у конкурентов</category>
+        <picture>https://sto.cross-export.ru/images/tild3062-6330-4764-a263-303737666631___.jpg</picture>
+        <name>Станки для обработки клапанов</name>
+        <description>Бесплатная техподдержка на весь срок. Доставка РФ. В наличии и на заказ. Гарантия.</description>
+      </offer><offer id="gorizrast">
+        <url>https://sto.cross-export.ru/gorizrast</url>
+        <price>7</price>
+        <currencyId>RUB</currencyId>
+        <category>Продаем стенды ТНВД и станки для ремонта ДВС. Цена до 20% выгоднее, чем у конкурентов</category>
+        <picture>https://sto.cross-export.ru/images/tild3062-6330-4764-a263-303737666631___.jpg</picture>
+        <name>Горизонтально-расточные станки</name>
+        <description>Бесплатная техподдержка на весь срок. Доставка РФ. В наличии и на заказ. Гарантия.</description>
+      </offer><offer id="verthoning">
+        <url>https://sto.cross-export.ru/verthoning</url>
+        <price>7</price>
+        <currencyId>RUB</currencyId>
+        <category>Продаем стенды ТНВД и станки для ремонта ДВС. Цена до 20% выгоднее, чем у конкурентов</category>
+        <picture>https://sto.cross-export.ru/images/tild3062-6330-4764-a263-303737666631___.jpg</picture>
+        <name>Вертикально-хонинговальные станки</name>
+        <description>Бесплатная техподдержка на весь срок. Доставка РФ. В наличии и на заказ. Гарантия.</description>
+      </offer><offer id="moechnye">
+        <url>https://sto.cross-export.ru/moechnye</url>
+        <price>7</price>
+        <currencyId>RUB</currencyId>
+        <category>Продаем стенды ТНВД и станки для ремонта ДВС. Цена до 20% выгоднее, чем у конкурентов</category>
+        <picture>https://sto.cross-export.ru/images/tild3062-6330-4764-a263-303737666631___.jpg</picture>
+        <name>Моечные устройства для очистки деталей ДВС</name>
+        <description>Бесплатная техподдержка на весь срок. Доставка РФ. В наличии и на заказ. Гарантия.</description>
+      </offer><offer id="bv120">
+        <url>https://sto.cross-export.ru/bv120</url>
+        <price>120</price>
+        <currencyId>RUB</currencyId>
+        <category>Станки для обработки фаски седла клапанов</category>
+        <picture>https://sto.cross-export.ru/images/tild6331-6539-4536-a665-393035666137__6.jpg</picture>
+        <name>Станок для обработки фаски седла клапанов BV120</name>
+        <description>Бесплатная техподдержка на весь срок. Доставка РФ. В наличии и на заказ. Гарантия.</description>
+      </offer><offer id="bv60">
+        <url>https://sto.cross-export.ru/bv60</url>
+        <price>60</price>
+        <currencyId>RUB</currencyId>
+        <category>Станки для обработки фаски седла клапанов</category>
+        <picture>https://sto.cross-export.ru/images/tild6331-6539-4536-a665-393035666137__6.jpg</picture>
+        <name>Станок для обработки фаски седла клапанов BV60</name>
+        <description>Бесплатная техподдержка на весь срок. Доставка РФ. В наличии и на заказ. Гарантия.</description>
+      </offer><offer id="bv60s">
+        <url>https://sto.cross-export.ru/bv60s</url>
+        <price>60</price>
+        <currencyId>RUB</currencyId>
+        <category>Станки для обработки фаски седла клапанов</category>
+        <picture>https://sto.cross-export.ru/images/tild6331-6539-4536-a665-393035666137__6.jpg</picture>
+        <name>Станок для обработки фаски седла клапанов BV60S</name>
+        <description>Бесплатная техподдержка на весь срок. Доставка РФ. В наличии и на заказ. Гарантия.</description>
+      </offer><offer id="bv90">
+        <url>https://sto.cross-export.ru/bv90</url>
+        <price>90</price>
+        <currencyId>RUB</currencyId>
+        <category>Станки для обработки фаски седла клапанов</category>
+        <picture>https://sto.cross-export.ru/images/tild6331-6539-4536-a665-393035666137__6.jpg</picture>
+        <name>Станок для обработки фаски седла клапанов BV90</name>
+        <description>Бесплатная техподдержка на весь срок. Доставка РФ. В наличии и на заказ. Гарантия.</description>
+      </offer><offer id="ld180a">
+        <url>https://sto.cross-export.ru/ld180a</url>
+        <price>180</price>
+        <currencyId>RUB</currencyId>
+        <category>Станки для обработки фаски седла клапанов</category>
+        <picture>https://sto.cross-export.ru/images/tild6331-6539-4536-a665-393035666137__6.jpg</picture>
+        <name>Станок для обработки фаски седла клапанов LD180A</name>
+        <description>Бесплатная техподдержка на весь срок. Доставка РФ. В наличии и на заказ. Гарантия.</description>
+      </offer><offer id="ld180l">
+        <url>https://sto.cross-export.ru/ld180l</url>
+        <price>180</price>
+        <currencyId>RUB</currencyId>
+        <category>Станки для обработки фаски седла клапанов</category>
+        <picture>https://sto.cross-export.ru/images/tild6331-6539-4536-a665-393035666137__6.jpg</picture>
+        <name>Станок для обработки фаски седла клапанов LD180L</name>
+        <description>Бесплатная техподдержка на весь срок. Доставка РФ. В наличии и на заказ. Гарантия.</description>
+      </offer><offer id="ld180lplus">
+        <url>https://sto.cross-export.ru/ld180lplus</url>
+        <price>180</price>
+        <currencyId>RUB</currencyId>
+        <category>Станки для обработки фаски седла клапанов</category>
+        <picture>https://sto.cross-export.ru/images/tild6331-6539-4536-a665-393035666137__6.jpg</picture>
+        <name>Станок для обработки фаски седла клапанов LD180L+</name>
+        <description>Бесплатная техподдержка на весь срок. Доставка РФ. В наличии и на заказ. Гарантия.</description>
+      </offer><offer id="ld180s">
+        <url>https://sto.cross-export.ru/ld180s</url>
+        <price>180</price>
+        <currencyId>RUB</currencyId>
+        <category>Станки для обработки фаски седла клапанов</category>
+        <picture>https://sto.cross-export.ru/images/tild6331-6539-4536-a665-393035666137__6.jpg</picture>
+        <name>Станок для обработки фаски седла клапанов LD180S</name>
+        <description>Бесплатная техподдержка на весь срок. Доставка РФ. В наличии и на заказ. Гарантия.</description>
+      </offer><offer id="tendtool_tl120">
+        <url>https://sto.cross-export.ru/tendtool_tl120</url>
+        <price>120</price>
+        <currencyId>RUB</currencyId>
+        <category>Станки для обработки фаски седла клапанов</category>
+        <picture>https://sto.cross-export.ru/images/tild6331-6539-4536-a665-393035666137__6.jpg</picture>
+        <name>Станок для обработки фаски седла клапанов Tendtool TL120</name>
+        <description>Бесплатная техподдержка на весь срок. Доставка РФ. В наличии и на заказ. Гарантия.</description>
+      </offer><offer id="tendtooltl120xl">
+        <url>https://sto.cross-export.ru/tendtooltl120xl</url>
+        <price>120</price>
+        <currencyId>RUB</currencyId>
+        <category>Станки для обработки фаски седла клапанов</category>
+        <picture>https://sto.cross-export.ru/images/tild6331-6539-4536-a665-393035666137__6.jpg</picture>
+        <name>Станок для обработки фаски седла клапанов Tendtool TL120 ХL</name>
+        <description>Бесплатная техподдержка на весь срок. Доставка РФ. В наличии и на заказ. Гарантия.</description>
+      </offer><offer id="vt60">
+        <url>https://sto.cross-export.ru/vt60</url>
+        <price>60</price>
+        <currencyId>RUB</currencyId>
+        <category>Станки для обработки фаски седла клапанов</category>
+        <picture>https://sto.cross-export.ru/images/tild6331-6539-4536-a665-393035666137__6.jpg</picture>
+        <name>Станок для обработки фаски седла клапанов VT60(VSB-60)</name>
+        <description>Бесплатная техподдержка на весь срок. Доставка РФ. В наличии и на заказ. Гарантия.</description>
+      </offer><offer id="t8210e">
+        <url>https://sto.cross-export.ru/t8210e</url>
+        <price>8210</price>
+        <currencyId>RUB</currencyId>
+        <category>Станки для ремонта шатунов</category>
+        <picture>https://sto.cross-export.ru/images/tild3330-3461-4431-b064-376633633334__2.jpg</picture>
+        <name>Станок для расточки верх. и нижней головки шатуна T8210E</name>
+        <description>Бесплатная техподдержка на весь срок. Доставка РФ. В наличии и на заказ. Гарантия.</description>
+      </offer><offer id="t8216">
+        <url>https://sto.cross-export.ru/t8216</url>
+        <price>8216</price>
+        <currencyId>RUB</currencyId>
+        <category>Станки для ремонта шатунов</category>
+        <picture>https://sto.cross-export.ru/images/tild3330-3461-4431-b064-376633633334__2.jpg</picture>
+        <name>Станок для ремонта шатунов T8216</name>
+        <description>Бесплатная техподдержка на весь срок. Доставка РФ. В наличии и на заказ. Гарантия.</description>
+      </offer>
+    </offers>
+  </shop>
+</yml_catalog>
