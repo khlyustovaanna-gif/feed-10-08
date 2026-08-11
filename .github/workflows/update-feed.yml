@@ -25,7 +25,12 @@ jobs: build: runs-on: ubuntu-latest steps: - name: Checkout repository uses: act
       SCRIPT_DIR=$(dirname "$SCRIPT_PATH")
       echo "Using working dir: $SCRIPT_DIR"
       ls -la "$SCRIPT_DIR" || true
-      python "$SCRIPT_PATH" "$(find "$SCRIPT_DIR" -maxdepth 1 -type f -name 'feed*.xml' | head -n 1 || echo './feed.xml')"
+      XML_PATH=$(find "$SCRIPT_DIR" -maxdepth 1 -type f -name 'feed*.xml' | head -n 1 || true)
+      if [ -z "$XML_PATH" ]; then
+        XML_PATH="./feed.xml"
+      fi
+      echo "Using XML: $XML_PATH"
+      python "$SCRIPT_PATH" "$XML_PATH"
 
   - name: Commit and push feed.cleaned.xml if changed
     run: |
