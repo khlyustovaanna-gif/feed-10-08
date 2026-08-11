@@ -29,10 +29,10 @@ jobs:
             exit 2
           fi
           echo "Found: $SCRIPT_PATH"
-          # use absolute paths to avoid duplicated relative segments
-          SCRIPT_ABS="$(pwd)/$SCRIPT_PATH"
-          SCRIPT_DIR="$(dirname "$SCRIPT_ABS")"
-          XML_FILE=$(find "$SCRIPT_DIR" -maxdepth 1 -type f -name 'feed*.xml' | head -n 1 || true)
+          # нормализуем абсолютный путь к скрипту и к XML
+          SCRIPT_ABS="$(pwd)/${SCRIPT_PATH#./}"
+          SCRIPT_DIR="$(dirname \"$SCRIPT_ABS\")"
+          XML_FILE="$(find "$SCRIPT_DIR" -maxdepth 1 -type f -name 'feed*.xml' | head -n 1 || true)"
           if [ -z "$XML_FILE" ]; then
             XML_FILE="$SCRIPT_DIR/feed.xml"
           fi
