@@ -13,6 +13,9 @@ jobs: build: runs-on: ubuntu-latest steps: - name: Checkout repository uses: act
 
   - name: Find and run clean_feed.py
     run: |
+      # Normalise runner working directory
+      cd "$GITHUB_WORKSPACE" || true
+      echo "PWD: $(pwd)"
       echo "Searching for clean_feed.py..."
       SCRIPT_PATH=$(find . -type f -name 'clean_feed.py' | head -n 1 || true)
       if [ -z "$SCRIPT_PATH" ]; then
@@ -39,4 +42,3 @@ jobs: build: runs-on: ubuntu-latest steps: - name: Checkout repository uses: act
         git push origin HEAD
       else
         echo "No changes to feed.cleaned.xml"
-      fi
