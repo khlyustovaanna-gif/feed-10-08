@@ -29,20 +29,18 @@ jobs:
             exit 2
           fi
           echo "Found: $SCRIPT_PATH"
-          # normalize to absolute directory
+          # get absolute paths (normalize)
           SCRIPT_DIR=$(dirname "$SCRIPT_PATH")
           SCRIPT_DIR=$(cd "$SCRIPT_DIR" && pwd)
-          SCRIPT_NAME=$(basename "$SCRIPT_PATH")
-          echo "Using working dir: $SCRIPT_DIR"
-          ls -la "$SCRIPT_DIR" || true
-          # find xml in the same dir (absolute)
+          SCRIPT_ABS="$SCRIPT_DIR/$(basename "$SCRIPT_PATH")"
           XML_FILE=$(find "$SCRIPT_DIR" -maxdepth 1 -type f -name 'feed*.xml' | head -n 1 || true)
           if [ -z "$XML_FILE" ]; then
             XML_FILE="$SCRIPT_DIR/feed.xml"
           fi
-          echo "Using XML file: $XML_FILE"
-          cd "$SCRIPT_DIR"
-          python "./$SCRIPT_NAME" "$XML_FILE"
+          XML_FILE=$(cd "$(dirname "$XML_FILE")" && pwd)/$(basename "$XML_FILE")
+          echo "Script abs path: $SCRIPT_ABS"
+          echo "XML abs path: $XML_FILE"
+          python "$SCRIPT_ABS" "$XML_FILE"
 
       - name: Commit and push feed.cleaned.xml if changed
         run: |
