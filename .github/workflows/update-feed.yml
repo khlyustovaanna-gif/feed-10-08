@@ -12,9 +12,9 @@ jobs: build: runs-on: ubuntu-latest steps: - name: Checkout repository uses: act
       python -m pip install --upgrade pip
 
   - name: Find and run clean_feed.py
+    # explicitly set working directory to repository workspace
+    working-directory: ${{ github.workspace }}
     run: |
-      # Normalise runner working directory
-      cd "$GITHUB_WORKSPACE" || true
       echo "PWD: $(pwd)"
       echo "Searching for clean_feed.py..."
       SCRIPT_PATH=$(find . -type f -name 'clean_feed.py' | head -n 1 || true)
@@ -42,3 +42,4 @@ jobs: build: runs-on: ubuntu-latest steps: - name: Checkout repository uses: act
         git push origin HEAD
       else
         echo "No changes to feed.cleaned.xml"
+      fi
