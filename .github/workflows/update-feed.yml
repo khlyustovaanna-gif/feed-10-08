@@ -1,3 +1,4 @@
+cat > .github/workflows/update-feed.yml <<'EOF'
 name: Update cleaned feed
 on:
   workflow_dispatch: {}
@@ -29,15 +30,13 @@ jobs:
             exit 2
           fi
           echo "Found: $SCRIPT_PATH"
-          # get absolute paths (normalize)
-          SCRIPT_DIR=$(dirname "$SCRIPT_PATH")
-          SCRIPT_DIR=$(cd "$SCRIPT_DIR" && pwd)
-          SCRIPT_ABS="$SCRIPT_DIR/$(basename "$SCRIPT_PATH")"
+          # use absolute paths to avoid duplicated relative segments
+          SCRIPT_ABS="$(pwd)/$SCRIPT_PATH"
+          SCRIPT_DIR="$(dirname "$SCRIPT_ABS")"
           XML_FILE=$(find "$SCRIPT_DIR" -maxdepth 1 -type f -name 'feed*.xml' | head -n 1 || true)
           if [ -z "$XML_FILE" ]; then
             XML_FILE="$SCRIPT_DIR/feed.xml"
           fi
-          XML_FILE=$(cd "$(dirname "$XML_FILE")" && pwd)/$(basename "$XML_FILE")
           echo "Script abs path: $SCRIPT_ABS"
           echo "XML abs path: $XML_FILE"
           python "$SCRIPT_ABS" "$XML_FILE"
@@ -49,7 +48,8 @@ jobs:
           if git status --porcelain | grep -q 'feed.cleaned.xml\|feed-10-08/feed.cleaned.xml\|feed-10-08/feed-10-08/feed.cleaned.xml'; then
             git add -A
             git commit -m "Auto-update feed.cleaned.xml (GitHub Actions)" || echo "No commit (no changes)"
-            git push || echo "Push failed"
+            git push origin HEAD
           else
             echo "No changes to feed.cleaned.xml"
           fi
+EOF
