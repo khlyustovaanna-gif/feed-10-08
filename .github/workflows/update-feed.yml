@@ -1,47 +1,59 @@
-name: Update cleaned feed on: workflow_dispatch: {} schedule: - cron: '0 3 * * *'
+﻿name: Update cleaned feed
+on:
+  workflow_dispatch: {}
+  schedule:
+    - cron: '0 3 * * *'
 
-jobs: build: runs-on: ubuntu-latest steps: - name: Checkout repository uses: actions/checkout@v4
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository into subfolder
+        uses: actions/checkout@v4
+        with:
+          path: repo
 
-  - name: Setup Python
-    uses: actions/setup-python@v4
-    with:
-      python-version: '3.x'
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
 
-  - name: Install requirements (if any)
-    run: |
-      python -m pip install --upgrade pip
+      - name: Install requirements (if any)
+        run: |
+          python -m pip install --upgrade pip
 
-  - name: Find and run clean_feed.py
-    # set working directory to the workspace's parent to avoid nested/duplicated segments
-    working-directory: ${{ github.workspace }}/..
-    run: |
-      echo "PWD: $(pwd)"
-      echo "Listing top-level here:"
-      ls -la
-      echo "Searching for clean_feed.py..."
-      SCRIPT_PATH=$(find . -type f -name 'clean_feed.py' | head -n 1 || true)
-      if [ -z "$SCRIPT_PATH" ]; then
-        echo "ERROR: clean_feed.py not found in repo"
-        exit 2
-      fi
-      echo "Found: $SCRIPT_PATH"
-      SCRIPT_DIR="$(dirname "$SCRIPT_PATH")"
-      XML_FILE="$(find "$SCRIPT_DIR" -maxdepth 1 -type f -name 'feed*.xml' | head -n 1 || true)"
-      if [ -z "$XML_FILE" ]; then
-        XML_FILE="$SCRIPT_DIR/feed.xml"
-      fi
-      echo "Script path: $SCRIPT_PATH"
-      echo "XML path: $XML_FILE"
-      python "$SCRIPT_PATH" "$XML_FILE"
+      - name: Find and run clean_feed.py
+        # run inside the checked-out 'repo' folder (guaranteed to exist)
+        working-directory: ${{ github.workspace }}/repo
+        run: |
+          echo "PWD: $(pwd)"
+          echo "Listing top-level of repo folder:"
+          ls -la
+          echo "Searching for clean_feed.py..."
+          SCRIPT_PATH=$(find . -type f -name 'clean_feed.py' | head -n 1 || true)
+          if [ -z "$SCRIPT_PATH" ]; then
+            echo "ERROR: clean_feed.py not found in repo"
+            exit 2
+          fi
+          echo "Found: $SCRIPT_PATH"
+          SCRIPT_DIR="$(dirname "$SCRIPT_PATH")"
+          XML_FILE="$(find "$SCRIPT_DIR" -maxdepth 1 -type f -name 'feed*.xml' | head -n 1 || true)"
+          if [ -z "$XML_FILE" ]; then
+            XML_FILE="$SCRIPT_DIR/feed.xml"
+          fi
+          echo "Script path: $SCRIPT_PATH"
+          echo "XML path: $XML_FILE"
+          python "$SCRIPT_PATH" "$XML_FILE"
 
-  - name: Commit and push feed.cleaned.xml if changed
-    run: |
-      git config user.name "github-actions[bot]"
-      git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-      if git status --porcelain | grep -q 'feed.cleaned.xml\|feed-10-08/feed.cleaned.xml\|feed-10-08/feed-10-08/feed.cleaned.xml'; then
-        git add -A
-        git commit -m "Auto-update feed.cleaned.xml (GitHub Actions)" || echo "No commit (no changes)"
-        git push origin HEAD
-      else
-        echo "No changes to feed.cleaned.xml"
-      fi
+      - name: Commit and push feed.cleaned.xml if changed
+        working-directory: ${{ github.workspace }}/repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git status --porcelain | grep -q 'feed.cleaned.xml\|feed-10-08/feed.cleaned.xml\|feed-10-08/feed-10-08/feed.cleaned.xml'; then
+            git add -A
+            git commit -m "Auto-update feed.cleaned.xml (GitHub Actions)" || echo "No commit (no changes)"
+            git push origin HEAD
+          else
+            echo "No changes to feed.cleaned.xml"
+          fi
