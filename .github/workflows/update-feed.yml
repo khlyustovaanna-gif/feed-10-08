@@ -8,10 +8,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository into subfolder
+      - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          path: repo
 
       - name: Setup Python
         uses: actions/setup-python@v4
@@ -23,11 +21,12 @@ jobs:
           python -m pip install --upgrade pip
 
       - name: Find and run clean_feed.py
-        # run inside the checked-out 'repo' folder (guaranteed to exist)
-        working-directory: ${{ github.workspace }}/repo
         run: |
-          echo "PWD: $(pwd)"
-          echo "Listing top-level of repo folder:"
+          # Ensure shell starts in a valid directory, then switch to the workspace
+          echo "Before cd: PWD=$(pwd)"
+          cd "$GITHUB_WORKSPACE" || { echo "Cannot cd to GITHUB_WORKSPACE: $GITHUB_WORKSPACE"; exit 2; }
+          echo "After cd: PWD=$(pwd)"
+          echo "Listing workspace root:"
           ls -la
           echo "Searching for clean_feed.py..."
           SCRIPT_PATH=$(find . -type f -name 'clean_feed.py' | head -n 1 || true)
@@ -46,7 +45,6 @@ jobs:
           python "$SCRIPT_PATH" "$XML_FILE"
 
       - name: Commit and push feed.cleaned.xml if changed
-        working-directory: ${{ github.workspace }}/repo
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
