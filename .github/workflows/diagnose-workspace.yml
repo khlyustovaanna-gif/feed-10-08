@@ -1,0 +1,27 @@
+﻿name: Diagnose workspace layout
+on:
+  workflow_dispatch: {}
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository (default)
+        uses: actions/checkout@v4
+
+      - name: Print environment and workspace info
+        run: |
+          echo "---- runner info ----"
+          uname -a || true
+          echo "GITHUB_WORKSPACE: $GITHUB_WORKSPACE"
+          echo "PWD at shell start: $(pwd)"
+          echo "Listing /home/runner/work (top level):"
+          ls -la /home/runner/work || true
+          echo "Listing repo workspace path:"
+          ls -la "$GITHUB_WORKSPACE" || true
+          echo "Listing recursive tree (depth 3) from workspace:"
+          find "$GITHUB_WORKSPACE" -maxdepth 3 -printf '%P\n' 2>/dev/null || true
+          echo "Searching for clean_feed.py (full paths):"
+          find /home/runner/work -type f -name 'clean_feed.py' -ls || true
+          echo "Searching for feed*.xml (full paths):"
+          find /home/runner/work -type f -name 'feed*.xml' -ls || true
