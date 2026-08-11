@@ -1,4 +1,4 @@
-name: Update cleaned feed
+﻿name: Update cleaned feed
 
 on:
   schedule:
@@ -29,19 +29,19 @@ jobs:
           python -m pip install --upgrade pip
           # pip install lxml    # uncomment if needed
 
-      - name: Run clean_feed.py
-        working-directory: ./feed-10-08/feed-10-08
+      - name: Run clean_feed.py (run inside workspace)
         run: |
+          cd "$GITHUB_WORKSPACE" || { echo "Cannot cd to GITHUB_WORKSPACE: $GITHUB_WORKSPACE"; exit 2; }
           python ./clean_feed.py ./feed.xml
 
       - name: Commit and push feed.cleaned.xml if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if git status --porcelain | grep -q 'feed-10-08/feed.cleaned.xml'; then
-            git add feed-10-08/feed.cleaned.xml
-            git commit -m "Auto-update feed.cleaned.xml (GitHub Actions)"
-            git push
+          if git status --porcelain | grep -q 'feed-10-08/feed.cleaned.xml\|feed.cleaned.xml'; then
+            git add -A
+            git commit -m "Auto-update feed.cleaned.xml (GitHub Actions)" || echo "No commit (no changes)"
+            git push origin HEAD
           else
             echo "No changes to feed.cleaned.xml"
           fi
