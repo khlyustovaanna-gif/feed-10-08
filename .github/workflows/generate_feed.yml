@@ -1,60 +1,47 @@
-﻿name: Generate YML feed
+name: Update cleaned feed
 
 on:
-  workflow_dispatch:
   schedule:
-    - cron: '0 */6 * * *'
+    - cron: '0 3 * * *'
+  push:
+    paths:
+      - 'feed-10-08/feed.xml'
+      - 'feed-10-08/clean_feed.py'
+      - '.github/workflows/update-feed.yml'
+  workflow_dispatch: {}
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          persist-credentials: true
 
-      - name: Set up Python
+      - name: Setup Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.10'
+          python-version: '3.x'
 
-      - name: Install dependencies
+      - name: Install requirements (if any)
         run: |
           python -m pip install --upgrade pip
-          pip install beautifulsoup4 lxml
+          # pip install lxml    # uncomment if needed
 
-      - name: Run feed generator
+      - name: Run clean_feed.py
+        working-directory: ./feed-10-08/feed-10-08
         run: |
-          python generate_feed_from_tilda_t778.py -i site_unpacked -b https://sto.cross-export.ru -o feed.xml
+          python ./clean_feed.py ./feed.xml
 
-      - name: Upload feed.xml artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: feed-xml
-          path: feed.xml
-
-      - name: Validate feed (min 5 offers)
+      - name: Commit and push feed.cleaned.xml if changed
         run: |
-          python - <<'PY'
-          import xml.etree.ElementTree as ET
-          try:
-              tree = ET.parse('feed.xml')
-              offers = len(tree.findall('.//offer'))
-          except Exception as e:
-              print('XML parse error:', e)
-              offers = 0
-          print('Found', offers, 'offers')
-          if offers < 5:
-              raise SystemExit('Feed validation failed: less than 5 offers')
-          PY
-
-      - name: Commit and push feed.xml
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          branch: main
-          file_pattern: feed.xml
-          commit_message: "chore(feed): update feed.xml [skip ci]"
-          commit_user_name: github-actions[bot]
-          commit_user_email: 41898282+github-actions[bot]@users.noreply.github.com
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git status --porcelain | grep -q 'feed-10-08/feed.cleaned.xml'; then
+            git add feed-10-08/feed.cleaned.xml
+            git commit -m "Auto-update feed.cleaned.xml (GitHub Actions)"
+            git push
+          else
+            echo "No changes to feed.cleaned.xml"
+          fi
